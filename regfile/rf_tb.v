@@ -25,15 +25,17 @@ regfile u_regfile(
     .wdata    (wdata     ) 
 );
 
-//clk
+//clk生成时钟信号
 initial 
 begin
     clk = 1'b1;
 end
 always #5 clk = ~clk;
-					
+
+//测试过程					
 initial 
 begin
+	//初始化信号
     raddr1 =  5'd0;
     raddr2 =  5'd0;
 	waddr  =  5'd0;
